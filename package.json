@@ -1,0 +1,13 @@
+{
+  "name": "calculadora",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "ignaciocuyun",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^23.1.1"
+  }
+}
