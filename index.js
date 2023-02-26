@@ -1,5 +1,5 @@
 
-
+alert('Instrucciones: \n 1. realizar una operacion ingresando un numero, despues un operador (+, -, /, *), despues otro numero y darle click al boton de igual \n 2. El resultado se va a borrar 2.5 segundos despues pero aparecera en el historial \n \n Nota: El boton de borrar se puede usar antes de darle click al boton de igual y para limpiar todo darle click al boton C')
 const $ = selector => document.querySelector(selector);
 
 const resultado = $('#resultado')
@@ -33,6 +33,9 @@ const clickSelector = (value) => {
         addRow(resultado.innerText)
         console.log('igual')
         equal = true
+        setTimeout(() => {
+            clearValues()
+        }, 2500)
         return
     }
 }
@@ -41,7 +44,7 @@ const clickSelector = (value) => {
 // agregar valor al span del resultado
 const addValue = (value) => {
     isNaN( value )
-    ? resultado.innerText += ` ${value} `
+    ? resultado.innerText += ` ${value} `
     : resultado.innerText += value
 }
 
